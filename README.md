@@ -6,7 +6,7 @@ This project is intended to automate the process of uploading .obs files to the 
 1. Log 24 hours of RAW-RAWX and RXM-SFRBX messages using the RTKLIB console app str2str
 `timeout 24h ./RTKLIB/app/consapp/str2str/gcc/str2str -in serial://[serialdevice]:[baud]:8:n:1:off -out ~/[filename].ubx`
 2. Process the resulting .ubx file into a .obs file using the RTKLIB console app convbin
-`./RTKLIB/app/consapp/convbin/gcc/convbin -od -os -oi -ot [filename].ubx`
+`./RTKLIB/app/consapp/convbin/gcc/convbin -od -os -oi -ot -ti 30 [filename].ubx`
 3. Wait a pre-determined length of time (Probably something like 2 weeks)
 4. Automatically upload .obs file to CSRS (THIS PROJECT)
 `python3 opus.py`
