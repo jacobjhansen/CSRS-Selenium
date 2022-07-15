@@ -100,4 +100,5 @@ submit = driver.find_element(by=By.XPATH, value='//*[@id="submit_btn"]')
 submit.click()
 time.sleep(1)
 
+driver.quit()
 sys.exit()
