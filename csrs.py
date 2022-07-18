@@ -101,4 +101,5 @@ submit.click()
 time.sleep(1)
 
 driver.quit()
+display.stop()
 sys.exit()
